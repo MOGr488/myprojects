@@ -12,21 +12,13 @@
 
               <div class="mt-40 grid gap-2 lg:grid-cols-2">
                 <div>
-                  <div class="h-60 w-full bg-red-600">
+                  <div class="h-auto w-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-4 p-7">
+                   
+                    <x-project.project-card :project="$project" 
+                    type="2"  /> 
 
+                  
 
-
-
-
-
-
-
-
-
-
-
-
-                    
                   </div>
                   <div class="w-full bg-blue-500 p-4">
                     <label for="countries" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">أختر حالة المشروع</label>

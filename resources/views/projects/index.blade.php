@@ -21,7 +21,13 @@
                 @for($i=0;$i<4;$i++)
                     @foreach ($projects as $project)
                     <li class="my-2">
-                      <x-project-card :project="$project" /> 
+                      <a href="/projects/{{ $project->id }}" class="block w-96 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
+
+                      <x-project.project-card 
+                      :project="$project"
+                      
+                       /> 
+                      </a>
                       </li>
                     @endforeach
 

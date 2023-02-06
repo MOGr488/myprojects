@@ -1,19 +1,20 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Project;
 
 use Illuminate\View\Component;
 
-class projectCard extends Component
+class ProjectCard extends Component
 {
+    public $project;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($project)
     {
-        //
+        $this->project = $project;
     }
 
     /**
@@ -23,6 +24,6 @@ class projectCard extends Component
      */
     public function render()
     {
-        return view('components.project-card');
+        return view('components.project.project-card');
     }
 }
