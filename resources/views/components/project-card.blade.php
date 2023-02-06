@@ -2,21 +2,8 @@
 
 <a href="/projects/{{ $project->id }}" class="block w-96 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
 
-    @switch($project->status)
-        @case(1)
-        <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400">ملغي</span>
 
-            @break
-        @case(2)
-        <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">مكتمل</span>
-            
-            @break
-        @default
-        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-purple-400 border border-purple-400"> قيد التنفيذ</span>
-
-    @endswitch
-
-
+<x-project-status :project="$project" />
 
     <h5 class="mb-2 mt-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {{ $project->title }}
