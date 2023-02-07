@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">
-    Index
+      المشاريع
     </x-slot>
 
 
@@ -18,7 +18,7 @@
               <ul class="my-6 flex items-center justify-between flex-wrap">
 
                 @unless (count($projects) == 0)
-                @for($i=0;$i<4;$i++)
+                
                     @foreach ($projects as $project)
                     <li class="my-2">
                       <a href="/projects/{{ $project->id }}" class="block w-96 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
@@ -31,7 +31,7 @@
                       </li>
                     @endforeach
 
-                @endfor
+                
                     @else
                     <h3 class="font-bold ">لا يوجد مشاريع</h3> 
                     @endunless

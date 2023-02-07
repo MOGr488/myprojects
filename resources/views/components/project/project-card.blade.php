@@ -2,7 +2,6 @@
   'type'=> 1
 ])
 
-
 <x-project.project-status :stat="$project->status" />
 
     <h5 class="mb-2 mt-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -23,7 +22,6 @@
             @break
             
     @endswitch
-    
-    
+        
     <x-project.project-card-bottom :project="$project" />
 
