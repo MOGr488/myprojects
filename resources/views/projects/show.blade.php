@@ -38,7 +38,7 @@
                 </div>
                 <div>
                   <div class="h-full w-full bg-green-600">
-
+                      
                     @foreach ($project->tasks as $task)
                         
                    
