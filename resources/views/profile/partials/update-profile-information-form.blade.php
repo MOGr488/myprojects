@@ -13,7 +13,7 @@
         @csrf
     </form>
 
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
         @csrf
         @method('patch')
 
@@ -51,10 +51,11 @@
         </div>
 
         <div class="mt-2 flex space-x-4">
+            {{ $user->image }}
             <div>
 
-                <img class="h-32 w-32 rounded-lg shadow-xl dark:shadow-gray-800" src="images\users\default.png"
-                    alt="profile image">
+                <img class="h-32 w-32 rounded-lg shadow-xl dark:shadow-gray-800" src="{{ $user->image }}"
+                    alt="{{ $user->image }}">
 
             </div>
 
@@ -65,7 +66,9 @@
                 <input type="file" name="image"
                     class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                     aria-describedby="file_input_help" id="file_input">
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG.</p>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help"> jpeg, jpg, png.</p>
+            <x-input-error class="mt-2" :messages="$errors->get('image')" />
+
 
             </div>
         </div>
