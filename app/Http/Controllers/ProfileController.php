@@ -34,7 +34,7 @@ class ProfileController extends Controller
         }
         
         if(request()->hasFile('image')){
-            $path = request()->file('image')->store('users');
+            $path = request()->file('image')->store('users', 'public');
             #dd($path);
             $request->user()->update(['image' => $path]);
         }
