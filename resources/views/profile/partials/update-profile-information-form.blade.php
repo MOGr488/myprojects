@@ -49,8 +49,6 @@
                 </div>
             @endif
         </div>
-storage\app\users\0mfk0S5LYqXMwc1mNfnUunybevr2T7CLoak4k7ys.png 
-{{ asset('storage/' . $user->image) }}
         <div class="mt-2 flex space-x-4">
             {{-- {{ asset('storage/' . $user->image) }} {{ asset('images/users/default.png') }}--}}
             <div>
@@ -58,8 +56,9 @@ storage\app\users\0mfk0S5LYqXMwc1mNfnUunybevr2T7CLoak4k7ys.png
                 <img class="h-32 w-32 rounded-lg shadow-xl dark:shadow-gray-800"
                     src="{{ asset('storage/' . $user->image) }}" alt="User Profile Picture">
 
+
             </div>
-            
+
 
             <div class="mt-3">
 
